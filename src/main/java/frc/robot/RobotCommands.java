@@ -95,8 +95,8 @@ public class RobotCommands{
     );
 
     public final StartEndCommand gearClimb = new StartEndCommand(
-        () -> CLIMBER.setGearSpeed(0.75),
-        () -> CLIMBER.setGearSpeed(0),
+        () -> CLIMBER.setClimbSpeed(0.75),
+        () -> CLIMBER.setClimbSpeed(0),
         CLIMBER
     );
     
