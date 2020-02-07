@@ -40,7 +40,7 @@ public class Pixy2Video {
 	private final Pixy2 pixy;
 
 	/**
-	 * Constructs Pixy2 video getter
+	 * Constructs Pixy2 video getter 
 	 * 
 	 * @param pixy Pixy2 instance
 	 */
