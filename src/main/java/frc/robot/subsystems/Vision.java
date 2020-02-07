@@ -24,7 +24,7 @@ public class Vision extends SubsystemBase {
   Pixy2 pixy;
   Pixy2CCC pixyCCC;
   Pixy2Video pixyVideo;
-  SPILink link = new SPILink();;
+  SPILink link = new SPILink();
 
   public Vision() {
     pixy = Pixy2.createInstance(link);
