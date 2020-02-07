@@ -16,7 +16,6 @@ import io.github.pseudoresonance.pixy2api.Pixy2CCC;
 import io.github.pseudoresonance.pixy2api.Pixy2Video;
 import io.github.pseudoresonance.pixy2api.Pixy2CCC.Block;
 import io.github.pseudoresonance.pixy2api.Pixy2Video.RGB;
-import io.github.pseudoresonance.pixy2api.links.Link;
 import io.github.pseudoresonance.pixy2api.links.SPILink;
 
 public class Vision extends SubsystemBase {
@@ -25,12 +24,13 @@ public class Vision extends SubsystemBase {
   Pixy2 pixy;
   Pixy2CCC pixyCCC;
   Pixy2Video pixyVideo;
+  SPILink link;
 
-  public Vision(Link link) {
+  public Vision() {
     pixy.init();
     pixy = Pixy2.createInstance(link);
     pixyCCC = pixy.getCCC();
-    pixyVideo = pixy2Video(pixy);
+    pixyVideo = pixy.getVideo();
   }
   
   /**
