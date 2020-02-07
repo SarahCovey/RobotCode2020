@@ -24,11 +24,11 @@ public class Vision extends SubsystemBase {
   Pixy2 pixy;
   Pixy2CCC pixyCCC;
   Pixy2Video pixyVideo;
-  SPILink link;
+  SPILink link = new SPILink();;
 
   public Vision() {
-    pixy.init();
     pixy = Pixy2.createInstance(link);
+    pixy.init();
     pixyCCC = pixy.getCCC();
     pixyVideo = pixy.getVideo();
   }
@@ -38,7 +38,7 @@ public class Vision extends SubsystemBase {
    * if the largest block's color matches the one inputed
    * 
    * @param color Color to check if the largest block matches it
-   * @return rRturns true if the colors inputed and of the largest block are the same
+   * @return Returns true if the colors inputed and of the largest block are the same
    */
   public boolean getRecentBlocks(Color color) {
     // Get data from all blocks and recieve said data
